@@ -7,20 +7,18 @@ interface Iconfig {
   lineColor: string,
 }
 export default class FlagChina {
-  private canvas: HTMLCanvasElement | null;
+  private canvas: HTMLCanvasElement | null = null;
+  private context: CanvasRenderingContext2D | null = null;
   private width: number;
   private height: number;
-  private context: CanvasRenderingContext2D | null;
   private config: Iconfig;
   private showLines: boolean;
-  private stars: Star[];
-  private lines: Line[];
+  private stars: Star[] = [];
+  private lines: Line[] = [];
   constructor(width: number, showLines: boolean = false) {
     this.width = width;
     this.height = (this.width * 2) / 3;
     this.showLines = showLines;
-    this.stars = [];
-    this.lines = [];
     this.config = {
       flagColor: '#F00',
       starColor: '#FF0',

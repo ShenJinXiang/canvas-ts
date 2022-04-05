@@ -13,24 +13,16 @@ interface IOption {
 }
 
 export default class ChineseChessBoard {
-  private canvas: HTMLCanvasElement | null;
-  private context: CanvasRenderingContext2D | null;
-  private width: number;
-  private height: number;
-  private ox: number;
-  private oy: number;
+  private canvas: HTMLCanvasElement | null = null;
+  private context: CanvasRenderingContext2D | null = null;
+  private width: number = 0;
+  private height: number = 0;
+  private ox: number = 0;
+  private oy: number = 0;
   private option: IOption;
-  private lines: Line[];
-  private corners: Corner[];
+  private lines: Line[] = [];
+  private corners: Corner[] = [];
   constructor(gridWidth: number) {
-    this.canvas = null;
-    this.context = null;
-    this.width = 0;
-    this.height = 0;
-    this.ox = 0;
-    this.oy = 0;
-    this.lines = [];
-    this.corners = [];
     this.option = {
       background: '#fdf5db',
       lineColor: '#444',
