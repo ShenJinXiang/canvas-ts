@@ -10,8 +10,18 @@ export default class Line {
     this.ey = ey;
   }
 
-  info(): void {
-    console.log(`(${this.sx}, ${this.sy}) - (${this.ex}, ${this.ey})`);
+  draw(context: CanvasRenderingContext2D | null, style: string, lineWidth: number) {
+    if (!context) {
+      return;
+    }
+    context.save();
+    context.lineWidth = lineWidth || 1;
+    context.strokeStyle = style;
+    context.beginPath();
+    context.moveTo(this.sx, this.sy);
+    context.lineTo(this.ex, this.ey);
+    context.closePath();
+    context.stroke();
+    context.restore();
   }
-
 }
