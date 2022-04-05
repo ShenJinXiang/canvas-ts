@@ -9,6 +9,6 @@ export default [
     title: '中国象棋棋盘',
     path: 'ChineseChessBoard',
     name: 'vChineseChessBoard',
-    component: () => import('@/views/page//ChineseChessBoard.vue'),
+    component: () => import('@/views/page/ChineseChessBoard.vue'),
   },
 ];

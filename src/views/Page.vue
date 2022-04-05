@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="page-con">
-      123
       <router-view />
     </div>
     <!-- <v-footer /> -->
