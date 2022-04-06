@@ -3,17 +3,17 @@
     <div class="page-con">
       <router-view />
     </div>
-    <!-- <v-footer /> -->
+    <v-footer />
   </div>
 </template>
 <script lang="ts">
-// import VFooter from '@/components/layout/Footer.vue';
+import VFooter from '@/components/layout/Footer.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Page',
   components: {
-    // VFooter,
+    VFooter,
   },
 });
 </script>

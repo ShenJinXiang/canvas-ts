@@ -10,15 +10,19 @@
         </li>
       </ul>
     </div>
+    <v-footer />
   </div>
 </template>
 <script lang="ts">
-import Line from '@/lib/Line';
+import vFooter from '@/components/layout/Footer.vue';
 import pages from '@/router/page';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Home',
+  components: {
+    vFooter,
+  },
   setup() {
     return {
       pages,
